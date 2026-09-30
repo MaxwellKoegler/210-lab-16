@@ -10,6 +10,25 @@ private:
     int green;
     int blue;
 public: //these are all the getter and setter functions
+
+    color() {
+        red = 0;
+        green = 0;
+        blue = 0;
+    }
+
+    color(int r, int g, int b) {
+        red = r;
+        green = g;
+        blue = b;
+    }
+
+    color(int r, int g) {
+        red = r;
+        green = g;
+        blue = 0;
+    }
+
     void setRed(int r) {
         red = r;
     }
@@ -37,31 +56,12 @@ public: //these are all the getter and setter functions
 };
 
 int main() {
-    color color1 = color();
-    color color2 = color();
-    color color3 = color();
-    color color4 = color();
+    color color1 = color(11,1,12);
+    color color2 = color(10,10,10);
+    color color3 = color(67,67,67);
+    color color4 = color(3456,13450,176576);
     color color5 = color();
 
-    color1.setRed(11);
-    color1.setGreen(1);
-    color1.setBlue(12);
-
-    color2.setRed(10);
-    color2.setGreen(10);
-    color2.setBlue(10);
-
-    color3.setRed(67);
-    color3.setGreen(67);
-    color3.setBlue(67);
-
-    color4.setRed(3456);
-    color4.setGreen(13450);
-    color4.setBlue(176576);
-
-    color5.setRed(0);
-    color5.setGreen(0);
-    color5.setBlue(0);
     cout << "   Color 1: " << endl;
     color1.print();
     cout << "    Color 2: " << endl;
