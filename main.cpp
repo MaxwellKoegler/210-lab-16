@@ -1,4 +1,4 @@
-//maxwell koegler | 9/29/26 | lab 14 | comsc 210
+//maxwell koegler | 9/29/26 | lab 16 | comsc 210
 
 #include <iostream>
 
@@ -9,27 +9,27 @@ private:
     int red;
     int green;
     int blue;
-public: //these are all the getter and setter functions
+public: //these are all the constructor functions
 
-    color() {
+    color() { //default constructor
         red = 0;
         green = 0;
         blue = 0;
     }
 
-    color(int r, int g, int b) {
+    color(int r, int g, int b) { //complete constructor
         red = r;
         green = g;
         blue = b;
     }
 
-    color(int r, int g) {
+    color(int r, int g) { //partial constructor
         red = r;
         green = g;
         blue = 0;
     }
 
-    void setRed(int r) {
+    void setRed(int r) { //getter and setter functions 
         red = r;
     }
     int getRed() {
@@ -58,8 +58,8 @@ public: //these are all the getter and setter functions
 int main() {
     color color1 = color(11,1,12);
     color color2 = color(10,10,10);
-    color color3 = color(67,67,67);
-    color color4 = color(3456,13450,176576);
+    color color3 = color(67,67);
+    color color4 = color(3456,13450,0);
     color color5 = color();
 
     cout << "   Color 1: " << endl;
